@@ -10,8 +10,13 @@
     tools:context="com.nemo.smsmanager.MainActivity">
 
     <Button
-        android:id="@+id/send"
+        android:id="@+id/sendManager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send sms" />
+        android:text="Send sms using sms manager" />
+    <Button
+        android:id="@+id/sendIntent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send sms using intent"/>
 </RelativeLayout>
