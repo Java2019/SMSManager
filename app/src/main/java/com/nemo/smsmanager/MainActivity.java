@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void sendIntent() {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.putExtra("address", new String("0123456789"));
+        intent.putExtra("sms_body" , "Test SMS to Angilla");
         intent.setData(Uri.parse("smsto:"));
         intent.setType("vnd.android-dir/mms-sms");
         try {
