@@ -1,6 +1,7 @@
 package com.nemo.smsmanager;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private void sendIntent() {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.putExtra("address", new String("0123456789"));
+        intent.setData(Uri.parse("smsto:"));
+        intent.setType("vnd.android-dir/mms-sms");
         try {
             startActivity(intent);
         }catch (Exception  e){
